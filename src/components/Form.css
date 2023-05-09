@@ -1,0 +1,317 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    outline: none;
+}
+.wrapper_fio {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    gap: 20px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    margin-top: 4rem;
+}
+
+*.disabled {
+    cursor: not-allowed;
+    opacity: 0.33;
+}
+
+/* --
+ base styles
+ ==*/
+
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    background: #fff;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'VK Sans Display', sans-serif;
+}
+
+
+
+/* sign up form styles */
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3.2rem;
+    width: 80%;
+    margin: auto;
+}
+
+.sign-up-form__fields {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.6rem;
+}
+
+
+/* field styles */
+
+.field {
+    display: block;
+    min-height: 7rem;
+    max-height: 10rem;
+}
+.field__label {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    display: inline-block;
+    margin-bottom: 3px;
+    padding-left: 3px;
+    transition: color 0.35s ease-out;
+}
+.field__label sup {
+    color: #ff0000;
+}
+.field.valid .field__input {
+    border-color: #008000;
+}
+.field.valid .field__input .field__checked svg {
+    opacity: 1;
+    stroke-dashoffset: 93;
+}
+.field.error .field__input {
+    border-color: #ff0000;
+}
+.field.error .field__input input::-webkit-input-placeholder,
+.field.error .field__input input::-moz-placeholder,
+.field.error .field__input input:-ms-input-placeholder,
+.field.error .field__input input::placeholder {
+    color: #ff0000;
+}
+.field label.form__error {
+    margin-bottom: 0.8rem;
+}
+.field__input, .field__textarea, .css-13cymwt-control{
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 4rem;
+    padding: 0;
+    border: 1px solid #ECEDEF;
+    border-radius: 1.2rem;
+    background-color: #F7F7F7;
+    transition: border-color 0.35s ease-in-out;
+}
+.field__input input::-webkit-input-placeholder, .field__input textarea::-webkit-input-placeholder, .field__textarea input::-webkit-input-placeholder, .field__textarea textarea::-webkit-input-placeholder {
+    color: #919399;
+}
+.field__input input::-moz-placeholder, .field__input textarea::-moz-placeholder, .field__textarea input::-moz-placeholder, .field__textarea textarea::-moz-placeholder {
+    color: #919399;
+}
+.field__input input:-ms-input-placeholder, .field__input textarea:-ms-input-placeholder, .field__textarea input:-ms-input-placeholder, .field__textarea textarea:-ms-input-placeholder {
+    color: #919399;
+}
+.field__input input::placeholder,
+.field__input textarea::placeholder, .field__textarea input::placeholder,
+.field__textarea textarea::placeholder {
+    color: #919399;
+}
+.field__input._visible, .field__textarea._visible {
+    border-color: #008000;
+}
+.field__input._visible .field__checked svg, .field__textarea._visible .field__checked svg {
+    opacity: 1;
+    stroke-dashoffset: 93;
+}
+.field__input._invalid, .field__textarea._invalid {
+    border-color: #ff0000;
+}
+.field__input._invalid input::-webkit-input-placeholder, .field__input._invalid textarea::-webkit-input-placeholder, .field__textarea._invalid input::-webkit-input-placeholder, .field__textarea._invalid textarea::-webkit-input-placeholder {
+    color: #ff0000;
+}
+.field__input._invalid input::-moz-placeholder, .field__input._invalid textarea::-moz-placeholder, .field__textarea._invalid input::-moz-placeholder, .field__textarea._invalid textarea::-moz-placeholder {
+    color: #ff0000;
+}
+.field__input._invalid input:-ms-input-placeholder, .field__input._invalid textarea:-ms-input-placeholder, .field__textarea._invalid input:-ms-input-placeholder, .field__textarea._invalid textarea:-ms-input-placeholder {
+    color: #ff0000;
+}
+.field__input._invalid input::placeholder,
+.field__input._invalid textarea::placeholder, .field__textarea._invalid input::placeholder,
+.field__textarea._invalid textarea::placeholder {
+    color: #ff0000;
+}
+.field__input input,
+.field__input textarea, .field__textarea input,
+.field__textarea textarea {
+    width: 100%;
+    padding: 1rem 1.6rem;
+    border: 0;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.field__input textarea, .field__textarea textarea {
+    resize: none;
+}
+.field__checked svg {
+    display: flex;
+    flex-shrink: 1;
+    width: 1.8rem;
+    height: 1.5rem;
+    color: #ff0000;
+    opacity: 0;
+    transition: stroke-dashoffset 0.35s ease-in-out, opacity 0.55s ease-in-out;
+    stroke-dasharray: 23;
+    stroke-dashoffset: 69;
+}
+.field .form__error {
+    padding-left: 3px;
+}
+.field textarea {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    min-height: 8rem;
+    max-height: 20rem;
+    padding: 10px;
+    border: none;
+    background-color: inherit;
+    outline: none;
+    resize: none;
+}
+.field textarea:focus, .field textarea:active {
+    border: 0 !important;
+    outline: 0 !important;
+    outline-offset: 0 !important;
+}
+.field textarea::-webkit-scrollbar {
+    width: 0;
+}
+.field textarea::-webkit-resizer {
+    border: none;
+    background: inherit;
+    outline: none;
+}
+
+/* radio styles */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    min-height: 5.5rem;
+}
+.radio-group__items {
+    display: flex;
+    flex-wrap: wrap;
+}
+.radio-group__title {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    padding-left: 3px;
+}
+.radio-group.valid .radio label {
+    color: #000000;
+}
+.radio-group.valid input[type=radio] {
+    border-color: #BFC1C7;
+}
+.radio-group.error .radio label {
+    color: #ff0000;
+}
+.radio-group.error input[type=radio] {
+    border-color: #ff0000;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 2.4rem;
+}
+.radio input[type=radio] {
+    width: 1.6rem;
+    height: 1.6rem;
+    padding: 0;
+    border: 1px solid #BFC1C7;
+    border-radius: 50%;
+    transition: 0.35s ease-in-out;
+    transition-property: box-shadow, border-color;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.radio input[type=radio]:checked {
+    border-color: #008000;
+    background-color: #ffffff;
+    box-shadow: inset 0 0 0 4.5px #008000;
+}
+.radio label {
+    margin-left: 1rem;
+    color: #000000;
+    font-size: 1.6rem;
+    pointer-events: painted;
+}
+
+/* btn styles */
+.btn {
+    line-height: 2rem;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    background: transparent;
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity 0.35s ease-in-out;
+}
+.btn._accent {
+    color: #ffffff;
+    background-color: #008000;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+
+.css-13cymwt-control {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 4rem;
+    padding: 0;
+    border: 1px solid #ECEDEF;
+    border-radius: 1.2rem;
+    background-color: #F7F7F7;
+    transition: border-color 0.35s ease-in-out;
+}
+
+Select {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 4rem;
+    padding: 0;
+    border: 1px solid #ECEDEF;
+    border-radius: 1.2rem;
+    background-color: #F7F7F7;
+    transition: border-color 0.35s ease-in-out;
+}
