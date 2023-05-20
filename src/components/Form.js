@@ -2,17 +2,20 @@ import React, { useState } from "react";
 import "./Form.css";
 import Select from "react-select";
 
-const options2 = [];
+
 const options3 = [
     { value: "a", label: "A" },
     { value: "b", label: "B" },
 ];
+
 const options4 = [];
-for (let i = 0; i < 28; i++) {
-    options2.push({ value: i, label: i });
-}
-for (let i = 1; i < 11; i++) {
+for (let i = 3; i < 28; i++) {
     options4.push({ value: i, label: i });
+}
+
+const options2 = [];
+for (let i = 1; i < 13; i++) {
+    options2.push({ value: i, label: i });
 }
 
 export const Form = () => {
